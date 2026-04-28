@@ -16,7 +16,7 @@ export default function Hero() {
           <h1 className="font-display text-[60px] md:text-[110px] font-bold leading-[0.8] text-brand-primary tracking-tighter">
             Re-Activa
           </h1>
-          <h2 className="font-display text-3xl md:text-5xl text-brand-on-surface-variant font-medium">
+          <h2 className="font-display text-4xl md:text-6xl text-brand-on-surface-variant font-medium">
             Bienestar laboral en movimiento.
           </h2>
         </motion.div>
@@ -29,7 +29,7 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.2 }}
           className="lg:col-span-6 relative"
         >
-          <div className="relative w-full aspect-square max-w-[450px] mx-auto">
+          <div className="relative w-full aspect-square max-w-[550px] mx-auto">
             {/* Main Hero Image with Mask */}
             <div className="absolute inset-0 bg-white p-3 rounded-[40px] shadow-xl shadow-black/5">
               <div className="w-full h-full rounded-[30px] overflow-hidden">

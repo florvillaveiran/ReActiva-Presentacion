@@ -44,11 +44,11 @@ export default function Comparison() {
            viewport={{ once: true }}
            className="text-center mb-8"
         >
-          <span className="inline-block py-1 px-3 rounded-full bg-[#E0F2F1] text-brand-primary font-bold text-[9px] uppercase tracking-widest mb-3 border border-brand-primary/10">
+          <span className="inline-block py-1.5 px-4 rounded-full bg-[#E0F2F1] text-brand-primary font-bold text-xs uppercase tracking-widest mb-4 border border-brand-primary/10">
             EFICIENCIA CORPORATIVA
           </span>
-          <h2 className="font-display text-4xl text-brand-on-surface font-bold mb-3 tracking-tight">Virtual gana siempre.</h2>
-          <p className="font-sans text-sm text-brand-on-surface-variant max-w-2xl mx-auto font-medium">
+          <h2 className="font-display text-5xl md:text-6xl text-brand-on-surface font-bold mb-4 tracking-tight">Virtual gana siempre.</h2>
+          <p className="font-sans text-base md:text-lg text-brand-on-surface-variant max-w-2xl mx-auto font-medium">
             La brecha entre el bienestar tradicional y la productividad moderna se cierra con tecnología.
           </p>
         </motion.div>
@@ -60,27 +60,29 @@ export default function Comparison() {
              <h3 className="font-display italic text-lg text-brand-on-surface-variant/40 mb-3 pl-2">Tradicional</h3>
              {comparisonData.map((item, i) => (
                 <div key={i} className="bg-white p-3 rounded-xl flex items-center gap-4 border border-slate-50 shadow-sm min-h-[70px]">
-                   <div className="bg-slate-50 p-2 rounded-lg text-brand-on-surface-variant/30">
-                      <item.icon size={16} />
+                   <div className="bg-slate-50 p-2.5 rounded-lg text-brand-on-surface-variant/30">
+                      <item.icon size={20} />
                    </div>
                    <div>
-                      <h4 className="font-bold text-brand-on-surface text-[12px] mb-0.5">{item.trad.title}</h4>
-                      <p className="text-[9px] text-brand-on-surface-variant/60 font-medium">{item.trad.desc}</p>
+                      <h4 className="font-bold text-brand-on-surface text-base mb-0.5">{item.trad.title}</h4>
+                      <p className="text-xs text-brand-on-surface-variant/60 font-medium">{item.trad.desc}</p>
                    </div>
                 </div>
              ))}
           </div>
 
           {/* Center Column - Labels */}
-          <div className="hidden lg:flex lg:col-span-1 flex-col justify-between items-center py-10">
-             <div className="h-full w-px bg-slate-100 relative py-8 flex flex-col justify-between items-center">
-                <ArrowLeftRight className="absolute top-1/2 -translate-y-1/2 bg-brand-cream text-slate-200 z-10" size={16} />
-                {comparisonData.map((item, i) => (
-                   <span key={i} className="bg-slate-50 py-1 px-2 rounded-full text-[7px] font-bold text-slate-300 uppercase tracking-widest border border-slate-100 z-10">
+          <div className="hidden lg:flex lg:col-span-1 relative flex-col space-y-2">
+             <div className="absolute top-12 bottom-4 w-px bg-slate-100 left-1/2 -translate-x-1/2 z-0"></div>
+             {/* Invisible header to match h3 height and spacing */}
+             <h3 className="font-display text-lg mb-3 invisible">Label</h3>
+             {comparisonData.map((item, i) => (
+                <div key={i} className="min-h-[70px] flex items-center justify-center relative z-10">
+                   <span className="bg-white py-1.5 px-3 md:px-4 rounded-full text-[10px] md:text-xs font-bold text-brand-primary uppercase tracking-widest border border-brand-primary/20 shadow-sm">
                       {item.label}
                    </span>
-                ))}
-             </div>
+                </div>
+             ))}
           </div>
 
           {/* Digital Column */}
@@ -88,12 +90,12 @@ export default function Comparison() {
              <h3 className="font-display font-bold text-lg text-brand-primary mb-3 pl-2">Digital-First</h3>
              {comparisonData.map((item, i) => (
                 <div key={i} className="bg-white p-3 rounded-xl flex items-center gap-4 border-slate-100 border shadow-md min-h-[70px]">
-                   <div className="bg-[#E0F2F1] p-2 rounded-lg text-brand-primary">
-                      <item.icon size={16} />
+                   <div className="bg-[#E0F2F1] p-2.5 rounded-lg text-brand-primary">
+                      <item.icon size={20} />
                    </div>
                    <div>
-                      <h4 className="font-bold text-brand-on-surface text-[12px] mb-0.5">{item.digital.title}</h4>
-                      <p className="text-[9px] text-brand-on-surface-variant/60 font-medium">{item.digital.desc}</p>
+                      <h4 className="font-bold text-brand-on-surface text-base mb-0.5">{item.digital.title}</h4>
+                      <p className="text-xs text-brand-on-surface-variant/60 font-medium">{item.digital.desc}</p>
                    </div>
                 </div>
              ))}

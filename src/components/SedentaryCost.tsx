@@ -6,29 +6,29 @@ const risks = [
     icon: Brain,
     title: "Mayor fatiga mental",
     desc: "Reducción del flujo sanguíneo cerebral.",
-    color: "bg-brand-tertiary-container",
-    onColor: "text-brand-on-tertiary-container"
+    color: "bg-red-100",
+    onColor: "text-red-600"
   },
   {
     icon: Timer,
     title: "+4 horas sentado",
     desc: "Punto crítico para el metabolismo muscular.",
-    color: "bg-brand-primary-container",
-    onColor: "text-brand-on-primary-container"
+    color: "bg-red-100",
+    onColor: "text-red-600"
   },
   {
     icon: Activity,
     title: "Dolencias musculares",
     desc: "Tensión acumulada en cuello y lumbares.",
-    color: "bg-brand-surface",
-    onColor: "text-brand-primary"
+    color: "bg-red-100",
+    onColor: "text-red-600"
   },
   {
     icon: ZapOff,
     title: "Dificultad para desconectar",
     desc: "El sedentarismo está vinculado a mayores niveles de estrés residual post-laboral.",
-    color: "bg-slate-100",
-    onColor: "text-slate-600"
+    color: "bg-red-100",
+    onColor: "text-red-600"
   }
 ];
 
@@ -44,10 +44,10 @@ export default function SedentaryCost() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="font-display text-4xl text-brand-primary tracking-tight mb-3 font-bold">
+            <h2 className="font-display text-5xl md:text-6xl text-brand-primary tracking-tight mb-4 font-bold">
               El Costo del Sedentarismo
             </h2>
-            <p className="font-sans text-sm text-brand-on-surface-variant max-w-lg mb-4">
+            <p className="font-sans text-base md:text-lg text-brand-on-surface-variant max-w-lg mb-6">
               La inactividad prolongada no es solo un hábito, es una barrera invisible que compromete tu vitalidad diaria.
             </p>
           </motion.div>
@@ -62,12 +62,12 @@ export default function SedentaryCost() {
                 transition={{ delay: i * 0.1 }}
                 className="bg-white p-3 rounded-xl shadow-sm border border-slate-50 flex items-center gap-4"
               >
-                <div className={`${risk.color} ${risk.onColor} w-8 h-8 rounded-full flex items-center justify-center shrink-0`}>
-                  <risk.icon size={16} />
+                <div className={`${risk.color} ${risk.onColor} w-10 h-10 rounded-full flex items-center justify-center shrink-0`}>
+                  <risk.icon size={20} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-brand-on-surface text-[12px]">{risk.title}</h4>
-                  <p className="text-[10px] text-brand-on-surface-variant/70 font-medium leading-tight">{risk.desc}</p>
+                  <h4 className="font-bold text-brand-on-surface text-base">{risk.title}</h4>
+                  <p className="text-sm text-brand-on-surface-variant/70 font-medium leading-tight">{risk.desc}</p>
                 </div>
               </motion.div>
             ))}
@@ -84,10 +84,9 @@ export default function SedentaryCost() {
         >
           <div className="overflow-hidden rounded-[32px] shadow-2xl relative">
             <img 
-              alt="People working in office" 
+              alt="Person sleeping at desk" 
               className="w-full aspect-video object-cover" 
-              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200" 
-              referrerPolicy="no-referrer"
+              src="/sedentarismo-costo.jpg" 
             />
             {/* Warning Overlay Label */}
             <motion.div 
@@ -98,7 +97,7 @@ export default function SedentaryCost() {
               className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-md px-4 py-2 rounded-lg flex items-center gap-2 border border-white/40 shadow-xl"
             >
               <TriangleAlert className="text-brand-primary" size={14} />
-              <span className="font-bold text-brand-on-surface text-[10px]">Riesgo Ergonómico Detectado</span>
+              <span className="font-bold text-brand-on-surface text-xs">Riesgo Ergonómico Detectado</span>
             </motion.div>
           </div>
         </motion.div>

@@ -97,23 +97,9 @@ function App() {
 
   return (
     <div className="fixed inset-0 bg-brand-cream overflow-hidden font-sans selection:bg-brand-primary/20">
-      {/* Top Header Placeholder */}
-      <div className="absolute top-8 left-8 z-[100] flex items-center gap-4">
-         <span className="font-display font-bold text-brand-primary text-2xl tracking-tighter">Re-Activa</span>
-      </div>
 
-      {/* Navigation Indicators */}
-      <div className="absolute left-8 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-3">
-        {slides.map((_, idx) => (
-          <button
-            key={idx}
-            onClick={() => goToSlide(idx)}
-            className={`w-1.5 rounded-full transition-all duration-500 ${
-              currentSlide === idx ? 'bg-brand-primary h-8' : 'bg-slate-300 hover:bg-slate-400 h-1.5'
-            }`}
-          />
-        ))}
-      </div>
+
+
 
       {/* Slide Controls */}
       <div className="absolute bottom-8 right-8 z-50 flex flex-col gap-3">

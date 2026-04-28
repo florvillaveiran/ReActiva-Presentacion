@@ -1,19 +1,19 @@
 import { motion } from 'motion/react';
-import { Accessibility, Shield, Zap } from 'lucide-react';
+import { BicepsFlexed, Brain, Zap } from 'lucide-react';
 
 const cardData = [
   {
     title: "Previene dolores",
     description: "Optimiza la postura y reduce la tensión muscular durante la jornada.",
-    icon: Accessibility,
+    icon: BicepsFlexed,
     bgColor: "bg-[#C8E6C9]",
     iconColor: "text-brand-primary",
     accentColor: "bg-brand-tertiary-container"
   },
   {
     title: "Reduce estrés",
-    description: "Ejercicios de respiración y pausas activas para la calma mental.",
-    icon: Shield,
+    description: "Técnicas de relajación diseñadas para aliviar la fatiga mental y mejorar el bienestar emocional.",
+    icon: Brain,
     bgColor: "bg-[#FCE4EC]",
     iconColor: "text-pink-600",
     accentColor: "bg-brand-primary-container"
@@ -38,8 +38,8 @@ export default function WhatIs() {
           viewport={{ once: true }}
           className="mb-8 max-w-2xl"
         >
-          <h2 className="font-display text-4xl text-brand-primary mb-3 font-bold tracking-tight">¿Qué es Re-Activa?</h2>
-          <p className="font-sans text-sm text-brand-on-surface-variant font-medium">
+          <h2 className="font-display text-5xl md:text-6xl text-brand-primary mb-4 font-bold tracking-tight">¿Qué es Re-Activa?</h2>
+          <p className="font-sans text-base md:text-lg text-brand-on-surface-variant font-medium">
             Un programa integral de bienestar con ejercicios personalizados, guiados y adaptados al entorno laboral.
           </p>
         </motion.div>
@@ -57,20 +57,14 @@ export default function WhatIs() {
               <div className={`w-14 h-14 ${card.bgColor} rounded-full flex items-center justify-center mb-6`}>
                 <card.icon className={`${card.iconColor}`} size={32} />
               </div>
-              <h3 className="font-display text-xl font-bold mb-2 text-brand-on-surface">{card.title}</h3>
-              <div className={`w-8 h-1 ${card.accentColor} rounded-full mb-4 opacity-50`}></div>
-              <p className="text-brand-on-surface-variant font-sans leading-relaxed text-xs">{card.description}</p>
+              <h3 className="font-display text-2xl font-bold mb-3 text-brand-on-surface">{card.title}</h3>
+              <div className={`w-10 h-1 ${card.accentColor} rounded-full mb-4 opacity-50`}></div>
+              <p className="text-brand-on-surface-variant font-sans leading-relaxed text-base">{card.description}</p>
             </motion.div>
           ))}
         </div>
 
-        {/* Presentation Dots */}
-        <div className="mt-8 flex gap-2">
-           <div className="w-2 h-2 rounded-full bg-slate-200"></div>
-           <div className="w-2 h-2 rounded-full bg-slate-200"></div>
-           <div className="w-8 h-2 rounded-full bg-brand-primary/50"></div>
-           <div className="w-2 h-2 rounded-full bg-slate-200"></div>
-        </div>
+
       </div>
     </section>
   );

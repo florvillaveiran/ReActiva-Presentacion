@@ -39,11 +39,11 @@ export default function Methodology() {
         viewport={{ once: true }}
         className="mb-6"
       >
-        <span className="inline-block py-1 px-3 rounded-full bg-brand-primary-container/20 text-brand-primary font-bold text-[8px] uppercase tracking-widest mb-3">
+        <span className="inline-block py-1.5 px-4 rounded-full bg-brand-primary-container/20 text-brand-primary font-bold text-[10px] md:text-xs uppercase tracking-widest mb-4">
           MÉTODO RE-ACTIVA
         </span>
-        <h2 className="font-display text-3xl text-brand-on-surface mb-2 font-bold tracking-tight">Metodología</h2>
-        <p className="font-sans text-[13px] text-brand-on-surface-variant max-w-2xl font-medium">
+        <h2 className="font-display text-4xl md:text-5xl text-brand-on-surface mb-3 font-bold tracking-tight">Metodología</h2>
+        <p className="font-sans text-base md:text-lg text-brand-on-surface-variant max-w-2xl font-medium">
           Un proceso cíclico diseñado para integrar la vitalidad en el flujo de trabajo.
         </p>
       </motion.div>
@@ -66,13 +66,13 @@ export default function Methodology() {
               <div className={`w-14 h-14 rounded-full transition-all duration-300 mb-3 relative z-20 flex items-center justify-center shadow-md border-2 border-white
                 ${step.active ? 'bg-brand-primary text-white' : 'bg-white text-brand-primary'}`}
               >
-                <step.icon size={24} />
-                <div className="absolute -top-1 -right-1 bg-brand-primary text-white text-[8px] font-bold w-5 h-5 rounded-full flex items-center justify-center border border-white">
-                  {step.num}
+                <step.icon size={28} />
+                <div className="absolute -top-1 -right-1 bg-brand-primary text-white text-[10px] font-bold w-6 h-6 rounded-full flex items-center justify-center border border-white">
+                   {step.num}
                 </div>
               </div>
-              <h3 className="font-display text-sm text-brand-on-surface mb-1 font-bold">{step.title}</h3>
-              <p className="font-sans text-brand-on-surface-variant text-[9px] px-2 leading-relaxed font-medium">{step.desc}</p>
+              <h3 className="font-display text-base text-brand-on-surface mb-1 font-bold">{step.title}</h3>
+              <p className="font-sans text-brand-on-surface-variant text-xs px-2 leading-relaxed font-medium">{step.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -90,12 +90,12 @@ export default function Methodology() {
             <CheckCircle2 size={20} />
             <h4 className="font-display text-lg font-bold">Eficiencia Comprobada</h4>
           </div>
-          <p className="font-sans text-brand-on-surface-variant text-xs mb-4 leading-relaxed font-medium">
+          <p className="font-sans text-brand-on-surface-variant text-sm md:text-base mb-6 leading-relaxed font-medium">
             Cada paso está diseñado para ser mínimamente invasivo pero altamente efectivo, potenciando el ritmo laboral.
           </p>
           <div className="flex flex-wrap gap-2">
             {['CIENCIA', 'PERSONALIZACIÓN', 'RESULTADOS'].map((tag, i) => (
-              <span key={i} className="px-2 py-1 rounded-full bg-slate-50 text-slate-400 text-[8px] font-bold tracking-widest uppercase">
+              <span key={i} className="px-3 py-1.5 rounded-full bg-slate-50 text-slate-400 text-[10px] font-bold tracking-widest uppercase">
                 {tag}
               </span>
             ))}
